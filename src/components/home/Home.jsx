@@ -6,10 +6,10 @@ class Home extends React.Component{
         const {userinfo}=this.props;
         return(
             <div className="home">
+                <p>User Information:</p>
                 <img src={userinfo.avator}/>
                 <p>{userinfo.githubName}</p>
-                <p> {userinfo.followers} followers</p>
-
+                <p> has {userinfo.followers} followers</p>
             </div>
         );
     }

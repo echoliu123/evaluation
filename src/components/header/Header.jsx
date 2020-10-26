@@ -3,6 +3,7 @@ import Home from "../home/Home"
 import Following from "../following/Following"
 import {getInfo ,getFollowers} from "../../apis/apis"
 import {BrowserRouter,Route,Link} from "react-router-dom"
+import  "./header.css"
 class Header extends React.Component{
     state={
         username:"",
@@ -53,7 +54,7 @@ class Header extends React.Component{
             value={this.state.username}/>
             <button onClick={this.handleClick}>search</button>
         {<BrowserRouter>
-            <Link user>Home</Link>
+            <Link to=".home">Home</Link>
             <Link to="/following">Following</Link>
             <Route path="/home"  component={Home}></Route>
             <Route path="/following" component={Following}></Route>
