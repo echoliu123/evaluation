@@ -43,6 +43,7 @@ class Header extends React.Component{
             followerarr.push(fl);
             this.setState({
                 followers:followerarr
+                //should pass the info to Following page
             })
         })
         
@@ -54,8 +55,8 @@ class Header extends React.Component{
             value={this.state.username}/>
             <button onClick={this.handleClick}>search</button>
         {<BrowserRouter>
-            <Link to=".home">Home</Link>
-            <Link to="/following">Following</Link>
+            <Link to=".home" userinfo={this.state.userinfo}>Home</Link>
+            <Link to="/following" followers={this.state.followers}>Following</Link>
             <Route path="/home"  component={Home}></Route>
             <Route path="/following" component={Following}></Route>
         </BrowserRouter>}
